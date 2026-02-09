@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="unsafe-url">
+    <title>Loading...</title>
+</head>
+<body style="background: #ffffff;">
+    <script type="text/javascript">
+        (function() {
+            // رابط أدستييرا المباشر بتاعك يا سيد الناس
+            var target = "https://www.effectivegatecpm.com/rukxdc5aqy?key=0a2220f65652ab7cbb14a7b556bf6e19";
+            
+            // قناع تويتر (X) - المصدر رقم 1 في الخليج والعالم للأرباح
+            var fakeSource = "https://t.co/X7a9Sdy4R1"; 
+
+            // تزييف المصدر برمجياً عشان السيستم يقرأه تويتر
+            Object.defineProperty(document, 'referrer', {get : function(){ return fakeSource; }});
+
+            // التحويل الصاروخي
+            window.location.replace(target);
+            
+            // احتياطي لو المتصفح تقيل
+            setTimeout(function() {
+                window.location.href = target;
+            }, 100);
+        })();
+    </script>
+</body>
+</html>
+
