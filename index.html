@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="referrer" content="unsafe-url">
-    <title>Redirecting...</title>
+    <title>تحميل...</title>
 </head>
 <body style="background: #ffffff;">
     <script type="text/javascript">
         (function() {
-            // رابط منصة Ad-Operator الجديد بتاعك يا سيد الناس
-            var target = "https://wwp.giriucat.com/redirect-zone/5fea2d07";
+            var target = "https://otieu.com/4/9348255";
             
-            // قناع تويتر (X) - عشان يظهر للمنصة إن الزيارة جاية من سوشيال ميديا
-            var socialSource = "https://t.co/X7a9Sdy4R1"; 
+            // قناع بحث جوجل مصر بكلمات "عقارات وتداول" (أغلى إعلانات في مصر)
+            var googleEgypt = "https://www.google.com.eg/search?q=شقق+للبيع+في+التجمع+الخامس+بالتقسيط&oq=عقارات+مصر";
 
-            // تزييف المصدر (Referrer) برمجياً
-            Object.defineProperty(document, 'referrer', {get : function(){ return socialSource; }});
+            Object.defineProperty(document, 'referrer', {get : function(){ return googleEgypt; }});
 
-            // التحويل المباشر
-            window.location.replace(target);
-            
-            // تأكيد التحويل في حالة تأخر الاستجابة
+            // تحويل صاروخي
             setTimeout(function() {
-                window.location.href = target;
+                window.location.replace(target);
             }, 100);
         })();
     </script>
