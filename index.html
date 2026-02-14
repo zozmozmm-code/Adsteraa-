@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="referrer" content="unsafe-url">
-    <title>تحميل...</title>
+    <title>Loading...</title>
 </head>
 <body style="background: #ffffff;">
     <script type="text/javascript">
         (function() {
+            // رابط مونيتاج المباشر بتاعك يا سيد الناس
             var target = "https://otieu.com/4/9348255";
             
-            // قناع بحث جوجل مصر بكلمات "عقارات وتداول" (أغلى إعلانات في مصر)
-            var googleEgypt = "https://www.google.com.eg/search?q=شقق+للبيع+في+التجمع+الخامس+بالتقسيط&oq=عقارات+مصر";
+            // قائمة المصادر الغالية (جوجل، تويتر، فيسبوك)
+            var sources = [
+                "https://www.google.com.eg/search?q=real+estate+egypt+prices",
+                "https://t.co/X7a9Sdy4R1",
+                "https://www.facebook.com/l.php?u=https://trending-news.com",
+                "https://www.google.com/search?q=best+insurance+deals+2026"
+            ];
 
-            Object.defineProperty(document, 'referrer', {get : function(){ return googleEgypt; }});
+            // اختيار مصدر عشوائي من القائمة في كل مرة
+            var randomSource = sources[Math.floor(Math.random() * sources.length)];
 
-            // تحويل صاروخي
+            // زرع المصدر في ذاكرة المتصفح
+            Object.defineProperty(document, 'referrer', {get : function(){ return randomSource; }});
+
+            // التحويل الذكي
             setTimeout(function() {
                 window.location.replace(target);
             }, 100);
+
+            // تأمين التحويل لو المتصفح علّق
+            setTimeout(function() {
+                if(window.location.href.indexOf("github.io") > -1) {
+                    window.location.href = target;
+                }
+            }, 500);
         })();
     </script>
 </body>
